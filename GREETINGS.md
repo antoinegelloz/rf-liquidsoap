@@ -3,7 +3,7 @@ This repository is maintained by [Radio France](https://www.radiofrance.fr/).
 Fondation Team, Direction du Numérique (2020-now)
 
 Many thanks to Romain Beauxis, Samuel Mimram, the awesome liquidsoap community,
-contributers and open source radio broadcasters that allowed a national
+contributors and open source radio broadcasters that allowed a national
 broadcaster like Radio France to build its streaming platform with open source
 tools.
 
