@@ -1,3 +1,4 @@
+---
 name: Release
 on:
   push:
@@ -14,5 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        id: release
         with:
           release-type: simple
+      - name: Build artifacts via Makefile and upload to release
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p dist
+          CLEAN_REF=$(echo "$GITHUB_REF_NAME" | sed 's/[^a-zA-Z0-9]//g')
+          VERSION="$CLEAN_REF-${GITHUB_SHA:0:7}"
+          make artifact VERSION="$VERSION"
+          ls -la dist
+          gh release upload --clobber ${{ steps.release.outputs.tag_name }} \
+            ./dist/rf-liquidsoap-$VERSION.zip \
+            ./dist/rf-liquidsoap-$VERSION.zip.md5
