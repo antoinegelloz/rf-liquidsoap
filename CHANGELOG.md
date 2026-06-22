@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## [2.12.1](https://github.com/antoinegelloz/rf-liquidsoap/compare/v2.12.0...v2.12.1) (2026-06-22)
+
+
+### Bug Fixes
+
+* release ([17924b3](https://github.com/antoinegelloz/rf-liquidsoap/commit/17924b353c68ba14a35261303b9475aaf2df58b1))
+
 ## [2.12.0](https://github.com/antoinegelloz/rf-liquidsoap/compare/v2.11.0...v2.12.0) (2026-06-22)
 
 
