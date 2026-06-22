@@ -1,5 +1,26 @@
 # CHANGELOG.md
 
+## [2.11.0](https://github.com/antoinegelloz/rf-liquidsoap/compare/v2.10.0...v2.11.0) (2026-06-22)
+
+
+### Features
+
+* **CI:** add PR pre-release artifacts ([dd5ac6b](https://github.com/antoinegelloz/rf-liquidsoap/commit/dd5ac6b6b75dd3c330340d970c03d0da742dc1b8))
+* **ci:** add PR pre-release prototype ([abc88a4](https://github.com/antoinegelloz/rf-liquidsoap/commit/abc88a47dc3426d571ac50bb453c3d33e51efc76))
+* **CI:** add yamllint ([f333753](https://github.com/antoinegelloz/rf-liquidsoap/commit/f33375393668cddc1e8f9c5c1bb87d344524bd49))
+* **CI:** add yamllint ([a45b51f](https://github.com/antoinegelloz/rf-liquidsoap/commit/a45b51fc724dc4974a418aa882cd2c6f1d75711d))
+* **CI:** improve the release workflow ([75a7462](https://github.com/antoinegelloz/rf-liquidsoap/commit/75a74625b6ddce61529e86ab530c4c5c81f520af))
+* **CI:** improve the release workflow ([6efbe8a](https://github.com/antoinegelloz/rf-liquidsoap/commit/6efbe8ad838b2b18232e58af440a5211c717ef90))
+
+
+### Bug Fixes
+
+* typo in GREETINGS.md file ([475ee33](https://github.com/antoinegelloz/rf-liquidsoap/commit/475ee33ac5bfb229e1734691d5695eef6b50a34e))
+* typo in GREETINGS.md file ([cefdc3c](https://github.com/antoinegelloz/rf-liquidsoap/commit/cefdc3cf2e0cd36e47b2c3db1dbdb95c1979fedd))
+* typo in README.md file ([4700de2](https://github.com/antoinegelloz/rf-liquidsoap/commit/4700de2119e7963db99d2f4beca5366321408511))
+* use liquidsoap-prettier v1.8.3 to format files ([f753e28](https://github.com/antoinegelloz/rf-liquidsoap/commit/f753e281bdb25bcae8b23716946e032b3b86f355))
+* use liquidsoap-prettier v1.8.3 to format files ([a88556c](https://github.com/antoinegelloz/rf-liquidsoap/commit/a88556ce775d978fc40305c332924a54bd8fb533))
+
 ### [2.0.9](https://www.github.com/radiofrance/rf-liquidsoap/compare/v2.0.6...v2.0.9) (2025-09-30)
 
 - bump(config): migrate config renovate.json
