@@ -25,10 +25,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p dist
-          CLEAN_REF=$(echo "$GITHUB_REF_NAME" | sed 's/[^a-zA-Z0-9]//g')
-          VERSION="$CLEAN_REF-${GITHUB_SHA:0:7}"
+          VERSION="${{ steps.release.outputs.tag_name }}"
           make artifact VERSION="$VERSION"
           ls -la dist
-          gh release upload --clobber ${{ steps.release.outputs.tag_name }} \
+          gh release upload --clobber $VERSION \
             ./dist/rf-liquidsoap-$VERSION.zip \
             ./dist/rf-liquidsoap-$VERSION.zip.md5
