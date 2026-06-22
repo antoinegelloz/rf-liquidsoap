@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+## [2.12.0](https://github.com/antoinegelloz/rf-liquidsoap/compare/v2.11.0...v2.12.0) (2026-06-22)
+
+
+### Features
+
+* wip ([f6f7af3](https://github.com/antoinegelloz/rf-liquidsoap/commit/f6f7af3ef61d995f4f37fa2071ddd75bc1dc3b86))
+
 ## [2.11.0](https://github.com/antoinegelloz/rf-liquidsoap/compare/v2.10.0...v2.11.0) (2026-06-22)
 
 
