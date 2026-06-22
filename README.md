@@ -42,7 +42,7 @@ If you want to know more about our streaming infrastructure:
 
 For each station (sometimes called "radio" in this repository), a Liquidsoap
 process will consume a set of active/fallback SRT sources to produce a single
-output stream called `radio_prod`. In the eventuallity the current preferred SRT
+output stream called `radio_prod`. In the eventuality the current preferred SRT
 source should fail, `radio_prod` will fallback to the next available source.
 Some sources can be excluded from the autofallback loop, waiting for a manual
 switch.
@@ -56,7 +56,7 @@ After the encoding, there are two output methods running in parallel:
 
 - Icecast: Liquidsoap connects as a source to an icecast server and pushes audio
 
-- HLS: adaptative / rolling playlists and audio segments are created locally and
+- HLS: adaptive / rolling playlists and audio segments are created locally and
   can be served by a simple HTTP server like NGINX. There is a purge mechanism
   that will get rid of old audio segments. Segments can also be pushed
   on a remote service we called `segmentforwarder`. Please note that this custom
@@ -68,20 +68,20 @@ In this project, the Liquidsoap configuration files are split in two. This
 separation allows us to industrialize the station definitions:
 
 - The `scripts/` folder contains a common set of Liquidsoap scripts that are
-  reused for each station. You may see it as a versionned "template folder" or
+  reused for each station. You may see it as a versioned "template folder" or
   "app". When we bring changes to these configuration files, all of our streams
   are impacted.
 
-- Per station configuration is achieved in a another file, provided in the
+- Per station configuration is achieved in another file, provided in the
   [start command](docker-compose.yml#L20) of the Liquidsoap process: for each
   stream we build, the `autofallback` SRT inputs, listening ports and output
   formats are defined in their own standalone file (see
   [myradio.liq](example/liquidsoap/myradio.liq) for a complete example). You
-  can see this as an inventory file. (To be honnest, we have so many stations to
+  can see this as an inventory file. (To be honest, we have so many stations to
   define we actually generate those files with an external templating tool)
 
 In the common Liquidsoap configuration, [Prometheus](scripts/20-prometheus.liq)
-metrics are created and exposed on a dedicated port, allowing the real time
+metrics are created and exposed on a dedicated port, allowing the real-time
 monitoring of buffers, audio levels and SRT input state.
 
 ![Advanced implementation architecture](.res/advanced.png)
@@ -273,7 +273,7 @@ scripts.
 
 | Name                                        | Type    | Description                            |
 |-------------------------------------------- | ------- | -------------------------------------- |
-| liquidsoap_hlssegment_sent                  | counter | Number of HLS segment send to segment-forwarder |
+| liquidsoap_hlssegment_sent                  | counter | Number of HLS segment sent to segment-forwarder |
 | liquidsoap_output_lufs_5s                   | gauge   | Audio LUFS Analysis of radio_prod with 5s windows |
 | liquidsoap_source_is_blank                  | gauge   | Is source blank? (no audio) |
 | liquidsoap_source_is_playing                | gauge   | Is source playing? |
@@ -357,7 +357,7 @@ Team. Special thanks to Maxime Bugeia for his precious work on this project.
 
 Feel free to fork or open issues if you have questions.
 
-Pull requests are welcome, but be aware we will be extra carreful in the merge
+Pull requests are welcome, but be aware we will be extra careful in the merge
 process since it has to match our needs.
 
 ## License
